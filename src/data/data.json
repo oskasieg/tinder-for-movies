@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "https://fwcdn.pl/fpo/05/71/30571/7529392.3.jpg",
+    "title": "Harry Potter and the Philosopher'S Stone",
+    "summary": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+    "rating": 7.5
+  },
+  {
+    "id": 1,
+    "imageUrl": "https://fwcdn.pl/fpo/10/65/1065/7912491.3.jpg",
+    "title": "Lord of the Rings: The Fellowship of the Ring",
+    "summary": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "rating": 8
+  }
+]

@@ -1,10 +1,14 @@
 .Footer {
-  background-color: #291dd6;
+  background-color: #0b1315;
   height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
 
   &__links {
     display: flex;
@@ -25,5 +29,9 @@
   &__text {
     font-size: 1.2em;
     color: white;
+
+    span {
+      color: #c96fff;
+    }
   }
 }

@@ -1,0 +1,15 @@
+.DecideButton {
+  width: 50%;
+  height: 50px;
+  font-size: 1.5em;
+  border: none;
+  color: white;
+
+  &__accept {
+    background-color: #2682df;
+  }
+
+  &__reject {
+    background-color: #eb1d7c;
+  }
+}

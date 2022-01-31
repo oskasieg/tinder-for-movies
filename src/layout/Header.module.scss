@@ -1,9 +1,13 @@
 .Header {
-  background-color: #291dd6;
+  background-color: #1b2223;
   height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 
   &__logo {
     width: 40px;
@@ -11,8 +15,8 @@
   }
 
   &__text {
-    color: white;
-    font-weight: bold;
+    color: #8b00f9;
     font-size: 2em;
+    margin: 0;
   }
 }

@@ -22,7 +22,9 @@ const Footer = () => {
           <img src={gitlab} alt="linkedin" />
         </a>
       </div>
-      <div className={styles.Footer__text}>Created by Krzysztof Sieg</div>
+      <div className={styles.Footer__text}>
+        Created by <span>Krzysztof Sieg</span>
+      </div>
     </footer>
   );
 };

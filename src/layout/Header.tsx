@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import tinderLogo from "../assets/tinder.svg";
+import tinderLogo from "../assets/tinder.png";
 
 interface IHeaderProps {
   appName: string;
