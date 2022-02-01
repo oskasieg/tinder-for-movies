@@ -1,11 +1,19 @@
 .Film {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0.8;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+
+  @media (min-width: 1500px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    margin-top: 100px;
+  }
 
   &__title {
     font-size: 1.7em;
+    line-height: 1.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,12 +21,35 @@
 
     span {
       font-weight: bold;
+      margin-right: 10px;
+    }
+
+    @media (min-width: 1500px) {
+      grid-column-start: 2;
+      margin: 0;
     }
   }
 
   &__image {
-    width: 90%;
+    max-width: 90%;
+    height: 300px;
     border: solid 1px;
+
+    @media (min-height: 750px) {
+      height: 380px;
+    }
+
+    @media (min-height: 850px) {
+      height: 480px;
+    }
+
+    @media (min-height: 900px) {
+      height: 600px;
+    }
+
+    @media (min-width: 1500px) {
+      grid-row: 1/4;
+    }
 
     img {
       object-fit: cover;
@@ -33,4 +64,15 @@
     text-align: center;
     line-height: 1.5em;
   }
+
+  &__buttons {
+    grid-column: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.dark {
+  color: white;
 }

@@ -1,0 +1,26 @@
+.AcceptedFilms {
+  @media (min-width: 1500px) {
+    padding: 100px;
+  }
+
+  &__text {
+    font-size: 1.7em;
+    text-align: center;
+
+    span {
+      color: #c96fff;
+    }
+  }
+
+  &__text:nth-of-type(1) {
+    color: #8b00f9;
+    font-weight: bold;
+  }
+
+  &__text:nth-of-type(2) {
+  }
+}
+
+.dark {
+  color: white;
+}
