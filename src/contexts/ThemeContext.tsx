@@ -24,6 +24,7 @@ const ThemeProvider: React.FC = ({ children }) => {
         "--bodyBackgroundColor",
         "#bebebe"
       );
+      setTheme("light");
     } else {
       switch (storageTheme) {
         case "light": {
@@ -46,8 +47,9 @@ const ThemeProvider: React.FC = ({ children }) => {
       setTheme(storageTheme);
     }
   }, []);
-
+  console.log(theme);
   const toggleTheme = () => {
+    console.log(theme);
     if (theme === "light") {
       setTheme("dark");
       localStorage.setItem("theme", "dark");

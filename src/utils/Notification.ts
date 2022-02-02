@@ -5,7 +5,7 @@ interface INotification {
   title: string;
   message: string;
   type: "success" | "danger" | "info" | "default" | "warning";
-  container: "bottom-left" | "bottom-right";
+  container: "bottom-left" | "bottom-right" | "bottom-center";
 }
 
 export const showNotification = ({

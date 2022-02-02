@@ -37,6 +37,12 @@ const FilmsProvider: React.FC = ({ children }) => {
 
     setFilms(data);
     setAcceptedFilms([]);
+    showNotification({
+      title: "Reset",
+      message: "You have reset application",
+      type: "info",
+      container: "bottom-center",
+    });
   };
 
   /**
