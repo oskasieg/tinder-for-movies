@@ -21,7 +21,7 @@ const AcceptedFilms = () => {
             Your accepted movies <span>({acceptedFilms.length})</span>:
           </>
         )}
-        {acceptedFilms.length === 0 && <>You aren't accepted any films!</>}
+        {acceptedFilms.length === 0 && <>You didn't accept any films!</>}
       </p>
 
       <div className={styles.AcceptedFilms__container}>

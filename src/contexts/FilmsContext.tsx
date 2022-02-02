@@ -66,12 +66,13 @@ const FilmsProvider: React.FC = ({ children }) => {
         }
         setFilms(films.filter((film) => film.id !== id));
 
-        showNotification({
-          title: "Success",
-          message: "You accepted a suggestion",
-          type: "success",
-          container: "bottom-left",
-        });
+        if (films.filter((film) => film.id !== id).length)
+          showNotification({
+            title: "Success",
+            message: "You accepted a suggestion",
+            type: "success",
+            container: "bottom-left",
+          });
 
         break;
       }
@@ -91,12 +92,13 @@ const FilmsProvider: React.FC = ({ children }) => {
 
         setFilms(films.filter((film) => film.id !== id));
 
-        showNotification({
-          title: "Success",
-          message: "You rejected a suggestion",
-          type: "danger",
-          container: "bottom-right",
-        });
+        if (films.filter((film) => film.id !== id).length)
+          showNotification({
+            title: "Success",
+            message: "You rejected a suggestion",
+            type: "danger",
+            container: "bottom-right",
+          });
 
         break;
       }
