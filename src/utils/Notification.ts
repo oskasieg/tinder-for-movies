@@ -1,5 +1,6 @@
 import { Store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
+import "animate.css";
 
 interface INotification {
   title: string;
@@ -19,11 +20,25 @@ export const showNotification = ({
     message,
     type,
     insert: "bottom",
-    container: window.innerWidth >= 1500 ? container : "center",
-    animationIn: ["animate__animated", "animate__fadeIn"],
-    animationOut: ["animate__animated", "animate__fadeOut"],
+    container: window.innerWidth >= 1500 ? container : "top-center",
+    animationIn:
+      container === "bottom-left"
+        ? ["animate__animated", "animate__slideInLeft"]
+        : container === "bottom-right"
+        ? ["animate__animated", "animate__slideInRight"]
+        : window.innerWidth >= 1500
+        ? ["animate__animated", "animate__slideInUp"]
+        : ["animate__animated", "animate__slideInDown"],
+    animationOut:
+      container === "bottom-left"
+        ? ["animate__animated", "animate__slideOutLeft"]
+        : container === "bottom-right"
+        ? ["animate__animated", "animate__slideOutRight"]
+        : window.innerWidth >= 1500
+        ? ["animate__animated", "animate__slideOutDown"]
+        : ["animate__animated", "animate__slideOutUp"],
     dismiss: {
-      duration: 1500,
+      duration: 1000,
       onScreen: true,
     },
   });

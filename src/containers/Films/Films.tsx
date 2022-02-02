@@ -1,29 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import styles from "./Films.module.scss";
 import { FilmsContext } from "../../contexts/FilmsContext";
-import { IFilm } from "./types";
 import Film from "../../components/Film/Film";
 import DecideButton from "../../components/DecideButton/DecideButton";
 import AcceptedFilms from "../../components/AcceptedFilms/AcceptedFilms";
 
 const Films = () => {
-  const { films } = useContext(FilmsContext);
-
-  const [currentFilm, setCurrentFilm] = useState<IFilm>({
-    id: -1,
-    imageUrl: "",
-    rating: -1,
-    summary: "",
-    title: "",
-  });
-
-  // calculate random suggestion from all suggestions
-  useEffect(() => {
-    if (films.length) {
-      const randomIndex = Math.floor(Math.random() * films.length);
-      setCurrentFilm(films[randomIndex]);
-    }
-  }, [films]);
+  const { films, currentFilm } = useContext(FilmsContext);
 
   return (
     <div className={styles.Films}>

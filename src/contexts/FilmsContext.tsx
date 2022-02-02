@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { IFilm, IFilms } from "../containers/Films/types";
 import data from "../data/data.json";
 import { showNotification } from "../utils/Notification";
@@ -6,6 +6,7 @@ import { showNotification } from "../utils/Notification";
 interface IFilmsContext {
   films: IFilms;
   acceptedFilms: IFilms;
+  currentFilm: IFilm;
   updateFilms: (id: number, action: "accept" | "reject") => void;
   resetFilms: () => void;
 }
@@ -13,6 +14,13 @@ interface IFilmsContext {
 const defaultState = {
   films: [],
   acceptedFilms: [],
+  currentFilm: {
+    id: -1,
+    imageUrl: "",
+    rating: -1,
+    summary: "",
+    title: "",
+  },
   updateFilms: () => {},
   resetFilms: () => {},
 };
@@ -27,6 +35,15 @@ const FilmsProvider: React.FC = ({ children }) => {
 
   // films accepted by user
   const [acceptedFilms, setAcceptedFilms] = useState<IFilms>([]);
+
+  // current film
+  const [currentFilm, setCurrentFilm] = useState<IFilm>({
+    id: -1,
+    imageUrl: "",
+    rating: -1,
+    summary: "",
+    title: "",
+  });
 
   const resetFilms = () => {
     // const response = await fetch("https://localhost/recommendations")
@@ -44,6 +61,21 @@ const FilmsProvider: React.FC = ({ children }) => {
       container: "bottom-center",
     });
   };
+
+  // calculate random suggestion from all suggestions
+  useEffect(() => {
+    if (films.length) {
+      const randomIndex = Math.floor(Math.random() * films.length);
+      setCurrentFilm(films[randomIndex]);
+    } else {
+      showNotification({
+        title: "Info",
+        message: "No new suggestions",
+        type: "info",
+        container: "bottom-center",
+      });
+    }
+  }, [films]);
 
   /**
    *
@@ -113,7 +145,7 @@ const FilmsProvider: React.FC = ({ children }) => {
 
   return (
     <FilmsContext.Provider
-      value={{ films, updateFilms, acceptedFilms, resetFilms }}
+      value={{ films, updateFilms, acceptedFilms, resetFilms, currentFilm }}
     >
       {children}
     </FilmsContext.Provider>
