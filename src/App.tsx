@@ -5,6 +5,7 @@ import Films from "./containers/Films/Films";
 import FilmsProvider from "./contexts/FilmsContext";
 import ThemeProvider from "./contexts/ThemeContext";
 import { ReactNotifications } from "react-notifications-component";
+import "./utils/Notification.scss";
 
 function App() {
   return (

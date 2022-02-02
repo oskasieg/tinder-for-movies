@@ -22,10 +22,12 @@ const Film = ({ film }: IFilmProps) => {
   };
 
   const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (swipeStart - swipeEnd > 150) {
-      updateFilms(film.id, "accept");
-    } else if (swipeStart - swipeEnd < -150) {
-      updateFilms(film.id, "reject");
+    if (films.length) {
+      if (swipeStart - swipeEnd > 150) {
+        updateFilms(film.id, "accept");
+      } else if (swipeStart - swipeEnd < -150) {
+        updateFilms(film.id, "reject");
+      }
     }
   };
   //

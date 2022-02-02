@@ -1,0 +1,44 @@
+.rnc__notification-item--danger {
+  background-color: #eb1d7c;
+  border-left: 8px solid #eb1d7c;
+
+  .rnc__notification-timer {
+    background-color: #eb1d7c;
+  }
+  .rnc__notification-timer-filler {
+    background-color: #eb1d7c;
+  }
+  .rnc__notification-close-mark {
+    background-color: #eb1d7c;
+  }
+}
+
+.rnc__notification-item--success {
+  background-color: #2682df;
+  border-left: 8px solid #2682df;
+
+  .rnc__notification-timer {
+    background-color: #2682df;
+  }
+  .rnc__notification-timer-filler {
+    background-color: #2682df;
+  }
+  .rnc__notification-close-mark {
+    background-color: #2682df;
+  }
+}
+
+.rnc__notification-item--default {
+  background-color: gray;
+  border-left: 8px solid gray;
+
+  .rnc__notification-timer {
+    background-color: gray;
+  }
+  .rnc__notification-timer-filler {
+    background-color: gray;
+  }
+  .rnc__notification-close-mark {
+    background-color: gray;
+  }
+}

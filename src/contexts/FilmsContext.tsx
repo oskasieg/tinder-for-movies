@@ -56,8 +56,8 @@ const FilmsProvider: React.FC = ({ children }) => {
     setAcceptedFilms([]);
     showNotification({
       title: "Reset",
-      message: "You have reset application",
-      type: "info",
+      message: "You have reset an application",
+      type: "default",
       container: "bottom-center",
     });
   };
@@ -71,7 +71,7 @@ const FilmsProvider: React.FC = ({ children }) => {
       showNotification({
         title: "Info",
         message: "No new suggestions",
-        type: "info",
+        type: "default",
         container: "bottom-center",
       });
     }
