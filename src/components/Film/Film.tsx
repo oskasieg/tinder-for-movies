@@ -1,6 +1,6 @@
 import { IFilmProps } from "./types";
 import styles from "./Film.module.scss";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { FilmsContext } from "../../contexts/FilmsContext";
 import DecideButton from "../DecideButton/DecideButton";
@@ -13,15 +13,15 @@ const Film = ({ film }: IFilmProps) => {
   let swipeEnd: number;
 
   // swipe action
-  const onTouchStart = (e: any) => {
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     swipeStart = e.touches[0].screenX;
   };
 
-  const onTouchMove = (e: any) => {
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
     swipeEnd = e.touches[0].screenX;
   };
 
-  const onTouchEnd = (e: any) => {
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
     if (swipeStart - swipeEnd > 150) {
       updateFilms(film.id, "accept");
     } else if (swipeStart - swipeEnd < -150) {

@@ -10,15 +10,27 @@ const Footer = () => {
         <a
           className={styles.Footer__link}
           href="https://www.linkedin.com/in/krzysztof-sieg-195733174/"
+          target={"_blank"}
+          rel="noreferrer"
         >
           <img src={linkedin} alt="linkedin" />
         </a>
 
-        <a className={styles.Footer__link} href="https://github.com/oskasieg">
+        <a
+          className={styles.Footer__link}
+          href="https://github.com/oskasieg"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <img src={github} alt="linkedin" />
         </a>
 
-        <a className={styles.Footer__link} href="https://gitlab.com/">
+        <a
+          className={styles.Footer__link}
+          href="https://gitlab.com/"
+          target={"_blank"}
+          rel="noreferrer"
+        >
           <img src={gitlab} alt="linkedin" />
         </a>
       </div>
