@@ -17,19 +17,22 @@ const Films = () => {
     title: "",
   });
 
+  // calculate random suggestion from all suggestions
   useEffect(() => {
     if (films.length) {
       const randomIndex = Math.floor(Math.random() * films.length);
-      console.log(films[randomIndex]);
       setCurrentFilm(films[randomIndex]);
     }
   }, [films]);
 
   return (
     <div className={styles.Films}>
+      {/* if they are new suggestions from API */}
       {films.length !== 0 && (
         <>
           <Film film={currentFilm} />
+
+          {/* mobile view */}
           {window.innerWidth < 1500 && (
             <div className={styles.Films__buttons}>
               <DecideButton
@@ -46,6 +49,7 @@ const Films = () => {
           )}
         </>
       )}
+      {/* if no more film suggestions from API render accepted suggestions */}
       {!films.length && <AcceptedFilms />}
     </div>
   );

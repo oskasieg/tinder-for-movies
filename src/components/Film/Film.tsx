@@ -5,13 +5,14 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { FilmsContext } from "../../contexts/FilmsContext";
 import DecideButton from "../DecideButton/DecideButton";
 
-const Film = ({ film, key }: IFilmProps) => {
+const Film = ({ film }: IFilmProps) => {
   const { updateFilms, films } = useContext(FilmsContext);
   const { theme } = useContext(ThemeContext);
 
   let swipeStart: number;
   let swipeEnd: number;
 
+  // swipe action
   const onTouchStart = (e: any) => {
     swipeStart = e.touches[0].screenX;
   };
@@ -27,6 +28,7 @@ const Film = ({ film, key }: IFilmProps) => {
       updateFilms(film.id, "reject");
     }
   };
+  //
 
   return (
     <div
@@ -34,7 +36,6 @@ const Film = ({ film, key }: IFilmProps) => {
       onTouchEnd={onTouchEnd}
       onTouchMove={onTouchMove}
       className={`${styles.Film} ${theme === "dark" ? styles.dark : ""}`}
-      key={key}
     >
       <p className={styles.Film__title}>
         <span>{film.title}</span> ({film.rating}/10)
@@ -50,6 +51,7 @@ const Film = ({ film, key }: IFilmProps) => {
 
       <p className={styles.Film__summary}>{film.summary}</p>
 
+      {/* desktop view */}
       {window.innerWidth >= 1500 && films.length !== 0 && (
         <div className={styles.Film__buttons}>
           <DecideButton filmId={film.id} text="Accept" type="accept" />

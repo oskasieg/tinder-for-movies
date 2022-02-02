@@ -15,7 +15,6 @@ const AcceptedFilms = () => {
         theme === "dark" ? styles.dark : ""
       }`}
     >
-      <p className={styles.AcceptedFilms__text}>No new suggestions :(</p>
       <p className={styles.AcceptedFilms__text}>
         {acceptedFilms.length > 0 && (
           <>
@@ -27,7 +26,9 @@ const AcceptedFilms = () => {
 
       <div className={styles.AcceptedFilms__container}>
         {acceptedFilms.map((film: IFilm, index: number) => (
-          <Film film={film} key={index} />
+          <div key={index}>
+            <Film film={film} />
+          </div>
         ))}
       </div>
     </div>

@@ -10,7 +10,28 @@
     "id": 1,
     "imageUrl": "https://fwcdn.pl/fpo/10/65/1065/7912491.3.jpg",
     "title": "Lord of the Rings: The Fellowship of the Ring",
-    "summary": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "summary": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron. A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     "rating": 8
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/f/f3/Spider-Man2002Poster.jpg",
+    "title": "Spider-man",
+    "summary": "Average teenager Peter Parker is transformed into an extraordinary super hero after he is accidentally bitten by a radioactive spider. When his beloved uncle is savagely murdered during a robbery, young Peter vows to use his powers to avenge his death. Deeming himself Spider-Man, he sets about ridding the streets of crime, bringing him into conflict with malevolent super-villain Green Goblin.",
+    "rating": 8
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://euroalphabet.pl/media/k2/items/cache/9415f9bcd76598f9c08127db1641b596_XL.jpg",
+    "title": "Shrek",
+    "summary": "The film was critically acclaimed as an animated film worthy of adult interest, with many adult-oriented jokes and themes, but a simple enough plot and humor to appeal to children. It made notable use of pop music—the soundtrack includes music by Smash Mouth, Eels, Joan Jett, the Proclaimers, Jason Wade, the Baha Men, and Rufus Wainwright.",
+    "rating": 7.7
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://m.media-amazon.com/images/I/71qtDoM-rcL._SY445_.jpg",
+    "title": "Fast and Furious",
+    "summary": "Fast & Furious (also known as The Fast and the Furious) is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists, spies and family. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures.",
+    "rating": 7
   }
 ]

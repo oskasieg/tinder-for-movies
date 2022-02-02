@@ -7,18 +7,6 @@ const DecideButton = ({ text, type, filmId }: IDecideButtonProps) => {
   const { updateFilms } = useContext(FilmsContext);
 
   const acceptSuggestion = () => {
-    // const response = await fetch(
-    //   `http://localhost/recommendations/${filmId}/accept`,
-    //   {
-    //     method: "PUT",
-    //     headers: {
-    //       "Content-type": "application/json",
-    //     },
-    //   }
-    // );
-
-    // const json = await response.json();
-
     updateFilms(filmId, type);
   };
 
