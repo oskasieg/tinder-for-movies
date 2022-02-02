@@ -12,7 +12,7 @@ const Film = ({ film }: IFilmProps) => {
   let swipeStart: number;
   let swipeEnd: number;
 
-  // swipe action
+  // swipe methods
   const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
     swipeStart = e.touches[0].screenX;
   };
@@ -30,7 +30,6 @@ const Film = ({ film }: IFilmProps) => {
       }
     }
   };
-  //
 
   return (
     <div
